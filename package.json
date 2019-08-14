@@ -7,27 +7,6 @@
   },
   "scripts": {
     "start": "node server/server",
-<<<<<<< HEAD
     "test": "npm test"
-=======
-    "build": "react-scripts build",
-    "test": "mocha",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
->>>>>>> a31507d1f84ae8371ef2d6f79aa8680ebb10605b
   }
 }
