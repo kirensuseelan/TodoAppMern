@@ -6,9 +6,9 @@
   
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server",
     "build": "react-scripts build",
-    "test": "npm test",
+    "test": "mocha",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
