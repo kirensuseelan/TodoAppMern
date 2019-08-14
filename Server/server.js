@@ -2,6 +2,8 @@ const express=require('express');
 const app=express();
 const PORT=4000;
 const todoRoutes=express.Router();
+const cors=require('cors');
+const bodyParser=require('body-parser');
 const mongoose=require('mongoose');
 
 let Todo=require('./todo.model');
@@ -14,13 +16,21 @@ connection.once('open',function(){
 
 
 app.use('/todos', todoRoutes);
+app.use(cors());
+app.use(bodyParser.json());
 
 
 app.listen(PORT,function(){
     console.log("Server is running on Port: "+ PORT);
 })
 
-todoRoutes.route('/').get(function(req, res){
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "YOUR-DOMAIN.TLD"); // update to match the domain you will make the request from
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+
+todoRoutes.route('/').get(function(req, res, next){
     Todo.find(function(err, todos){
         if(err){
             console.log(err);
