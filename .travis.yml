@@ -5,3 +5,8 @@ node_js:
   cache:
   directories:
     - "node_modules"
+
+install:
+ - npm install -g mocha@2.3.1
+ - npm install chai@3.2.0 chai-http@1.0.0
+
