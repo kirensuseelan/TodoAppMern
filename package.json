@@ -7,6 +7,6 @@
   },
   "scripts": {
     "start": "node server/server",
-    "test": "mocha"
+    "test": "mocha Server/test/test-server.js"
   }
 }
