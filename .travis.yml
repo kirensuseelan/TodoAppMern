@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - 12
+
+services:
+  - mongodb
+
+install:
+ - npm install -g mocha@2.3.1
+ - npm install chai@3.2.0 chai-http@1.0.0
+ - npm install
+ - gem install travis
+
+before_script:
+ — sleep 5 # give gulp background task some time to execute.
+
+
+after_success:
+  - "curl -o /travis-automerge https://github.com/kirensuseelan/TodoAppMern/tree/Dev"
+  - "chmod a+x /travis-automerge"
+  - "BRANCHES_TO_MERGE_REGEX='Dev' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=kirensuseelan/TodoAppMern /travis-automerge"
+
