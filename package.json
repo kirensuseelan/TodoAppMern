@@ -9,6 +9,6 @@
   },
   "scripts": {
     "start": "node Server/server",
-    "test": "mocha Server/test/test-server.js --exit"
+    "test": "mocha Server/test/test-server.js"
   }
 }
