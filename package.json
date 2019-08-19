@@ -10,6 +10,15 @@
   },
   "scripts": {
     "start": "node Server/server",
+    "build": "cd client/ && npm install && npm run build",
     "test": "mocha Server/test/test-server.js --exit"
+  },
+   "cacheDirectories": [
+    "Client/node_modules",
+    "server/node_modules"
+  ],
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/kirensuseelan/TodoAppMern.git"
   }
 }
