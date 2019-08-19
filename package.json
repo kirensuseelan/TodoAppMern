@@ -17,4 +17,8 @@
     "Client/node_modules",
     "server/node_modules"
   ],
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/kirensuseelan/TodoAppMern.git"
+  }
 }
